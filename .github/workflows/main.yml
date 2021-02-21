@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
+        python-version: [2.7]
 
     steps:
     - uses: actions/checkout@v2
@@ -30,3 +30,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    # You can test your matrix by printing the current Python version
+    - name: Display Python version
+      run: python -c "import sys; print(sys.version)"
