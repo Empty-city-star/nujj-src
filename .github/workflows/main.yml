@@ -18,19 +18,13 @@ jobs:
       matrix:
         python-version: [2.7]
 
-    steps:
+  steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: 初始化Python
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+        python-version: 3.7
+    - name: 签到
       run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with py
-      run: |
-        pip install pytest
-        pip install pytest-cov
-        pytest tests.py
+        pip install -r requirements.txt
+        python3 checkin.py
