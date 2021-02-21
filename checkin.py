@@ -28,7 +28,7 @@ def main():
         "Host" : "m.cloud.189.cn",
         "Accept-Encoding" : "gzip, deflate",
     }
-    if(a = b):
+    if(a == b):
         print(f"未签到，签到获得M空间")
     else:
         if(a>c):
@@ -47,7 +47,7 @@ def main():
     if ("errorCode" in response.text):
         print(response.text)
     else:
-        if(a = b):
+        if(a == b):
             print(f"未签到，签到获得M空间")
         else:
             if(a>c):
