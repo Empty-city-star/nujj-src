@@ -1,4 +1,3 @@
 #coding=utf-8
-print("eee")
-print("eee")
-print("eee")
+import sys;
+print(sys.version)
