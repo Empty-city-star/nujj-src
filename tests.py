@@ -2,7 +2,7 @@
 
 import sys
 
-class PyTest(TestCommand):
+class PyTest():
     """
     Running `$ python setup.py test' simply installs minimal requirements
     and runs the tests with no fancy stuff like parallel execution.
