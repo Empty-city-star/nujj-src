@@ -37,4 +37,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     # You can test your matrix by printing the current Python version
     - name: Display Python version
-      run: python -c "import sys; print(sys.version)"
+      run: |
+        python -c "import sys; print(sys.version)"
+        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
