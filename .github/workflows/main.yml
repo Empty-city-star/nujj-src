@@ -12,13 +12,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [2.7]
+    if: github.event.repository.owner.id == github.event.sender.id
 
-  steps:
+    steps:
     - uses: actions/checkout@v2
     - name: 初始化Python
       uses: actions/setup-python@v2
@@ -28,3 +25,4 @@ jobs:
       run: |
         pip install -r requirements.txt
         python3 checkin.py
+        done
