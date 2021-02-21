@@ -1,2 +1,4 @@
 #coding=utf-8
-print("哈哈哈")
+print("eee")
+print("eee")
+print("eee")
